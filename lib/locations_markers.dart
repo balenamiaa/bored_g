@@ -4,7 +4,6 @@ import 'dart:io';
 import 'package:bored_g/map_latlng.dart';
 import 'package:bored_g/scaling_marker_layer.dart';
 import 'package:fluttericon/rpg_awesome_icons.dart';
-import 'package:fluttericon/typicons_icons.dart';
 import '_file_paths.dart';
 import '_flutterstyle.dart';
 import 'package:flutter_map/plugin_api.dart';

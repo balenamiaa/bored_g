@@ -10,6 +10,8 @@ import 'package:flutter_map/flutter_map.dart';
 import 'package:flutter_map_marker_cluster/flutter_map_marker_cluster.dart';
 import 'package:hotkey_manager/hotkey_manager.dart';
 import 'package:latlong2/latlong.dart';
+import 'package:searchfield/searchfield.dart';
+import 'package:tuple/tuple.dart';
 import 'package:win32/win32.dart' hide Polygon;
 import 'package:ffi/ffi.dart';
 import 'package:path/path.dart' as path;
@@ -52,11 +54,11 @@ class DayZApp extends StatefulWidget {
 
 class DayZAppState extends State<DayZApp> {
   final Alignment _enabledMapAlignment = Alignment.lerp(Alignment.centerLeft, Alignment.center, 0.625)!;
-  final Alignment _disabledMapAlignment = Alignment.bottomRight;
+  final Alignment _disabledMapAlignment = Alignment.topRight;
 
   bool isEnabled = false;
-  double _mapWidth = 256;
-  double _mapHeight = 256;
+  double _mapWidth = 300;
+  double _mapHeight = 300;
   bool _imageOverlayEnabled = false;
   List<bool> locationMarkersEnabled = List.filled(locationMarkers.length, true);
   bool _redLocationsEnabled = true;
@@ -65,6 +67,7 @@ class DayZAppState extends State<DayZApp> {
 
   HotKey openToolHotkey = HotKey(KeyCode.home, modifiers: [KeyModifier.control]);
   final int _hwnd = FindWindow("FLUTTER_RUNNER_WIN32_WINDOW".toNativeUtf16(), nullptr);
+  int? _oldHwnd;
 
   @override
   void dispose() {
@@ -91,12 +94,21 @@ class DayZAppState extends State<DayZApp> {
         _mapWidth = 1024;
         _mapHeight = 900;
 
+        _oldHwnd = GetForegroundWindow();
         SetWindowLongPtr(_hwnd, GWL_EXSTYLE, WS_EX_LAYERED | WS_EX_TOPMOST);
+        SetForegroundWindow(_hwnd);
+        SetFocus(_hwnd);
       } else {
         _mapWidth = 256;
         _mapHeight = 256;
 
+        Navigator.of(context).popUntil(ModalRoute.withName('/'));
+
         SetWindowLongPtr(_hwnd, GWL_EXSTYLE, WS_EX_LAYERED | WS_EX_TRANSPARENT | WS_EX_TOPMOST);
+        if (_oldHwnd != null) {
+          SetForegroundWindow(_oldHwnd!);
+          SetFocus(_oldHwnd!);
+        }
       }
     });
   }
@@ -107,6 +119,12 @@ class DayZAppState extends State<DayZApp> {
 
     var ui = Column(
       children: [
+        IconButton(
+          onPressed: () => showSearchDialog(context),
+          icon: const Icon(Icons.search),
+          splashRadius: 24,
+        ),
+        const SizedBox(height: 24),
         CheckboxMenuButton(
           value: _imageOverlayEnabled,
           onChanged: (value) {
@@ -163,6 +181,7 @@ class DayZAppState extends State<DayZApp> {
             child: Padding(
                 padding: const EdgeInsets.all(12),
                 child: Card(
+                  color: const Color.fromARGB(255, 27, 7, 2),
                   child: Padding(
                     padding: const EdgeInsets.all(12),
                     child: ui,
@@ -195,7 +214,6 @@ class DayZAppState extends State<DayZApp> {
         child: FlutterMap(
           mapController: _mapController,
           options: MapOptions(
-            onTap: (tapPosition, point) => print(point),
             interactiveFlags: InteractiveFlag.drag | InteractiveFlag.flingAnimation,
             crs: DayZCrs(),
             zoom: 2,
@@ -221,7 +239,7 @@ class DayZAppState extends State<DayZApp> {
                   padding: EdgeInsets.all(50),
                   maxZoom: 15,
                 ),
-                markers: settlementLocationMarkers,
+                markers: settlementLocationMarkers.map((e) => e.item2).toList(),
                 builder: (context, markers) {
                   return Container(
                     decoration: BoxDecoration(borderRadius: BorderRadius.circular(12), color: Colors.amber[400]),
@@ -252,10 +270,60 @@ class DayZAppState extends State<DayZApp> {
                   ),
                 ],
               ),
-            ...locationMarkers.mapIndexed((index, e) => locationMarkersEnabled[index] ? e.markerLayer : null).whereNotNull()
+            ...locationMarkers.mapIndexed((index, e) => locationMarkersEnabled[index] ? e.markerLayer : null).whereNotNull(),
+            if (_redLocationsEnabled) MarkerLayer(markers: redLocationMarkers),
+            if (_pinkLocationsEnabled) MarkerLayer(markers: pinkLocationMarkers)
           ],
         ),
       ),
     );
+  }
+
+  showSearchDialog(BuildContext context) {
+    var focus = FocusNode();
+    showDialog<LatLng>(
+      context: context,
+      builder: (cx) {
+        var search = SearchField<Tuple2<String, Marker>>(
+          suggestions: settlementLocationMarkers
+              .map(
+                (e) => SearchFieldListItem<Tuple2<String, Marker>>(
+                  e.item1,
+                  item: e,
+                ),
+              )
+              .toList(),
+          textInputAction: TextInputAction.continueAction,
+          focusNode: focus,
+          onSuggestionTap: (p0) {
+            Navigator.pop(context, p0.item!.item2.point);
+          },
+        );
+        var title = const Text(
+          "Search Settlements",
+          textAlign: TextAlign.center,
+          style: TextStyle(fontSize: 18, color: Colors.white, fontWeight: FontWeight.bold),
+        );
+        return Container(
+          alignment: Alignment.topCenter,
+          padding: const EdgeInsets.all(16),
+          child: FractionallySizedBox(
+            widthFactor: 1,
+            heightFactor: 0.1,
+            child: Card(
+              shadowColor: const Color.fromARGB(255, 143, 139, 139),
+              elevation: 24,
+              child: Padding(
+                padding: const EdgeInsets.all(8),
+                child: Column(
+                  children: [Flexible(child: title), search],
+                ),
+              ),
+            ),
+          ),
+        );
+      },
+    ).then((value) => _mapController.move(value!, 4));
+    focus.requestFocus();
   }
 }

@@ -44,6 +44,7 @@ dependencies:
   quiver: ^3.2.1
   collection: ^1.17.0
   fluttericon: ^2.0.0
+  searchfield: ^0.7.5
 
 dev_dependencies:
   flutter_test:

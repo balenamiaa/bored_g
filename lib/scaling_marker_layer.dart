@@ -58,9 +58,12 @@ class ScaledMarkerLayer extends StatelessWidget {
         continue;
       }
 
+      if (width * height < 9) {
+        continue;
+      }
+
       final posNorthWest = pxNorthWest - map.pixelOrigin;
       final markerWidget = (marker.rotate ?? rotate)
-          // Counter rotated marker to the map rotation
           ? Transform.rotate(
               angle: -map.rotationRad,
               origin: marker.rotateOrigin ?? rotateOrigin,
