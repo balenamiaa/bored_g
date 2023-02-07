@@ -1,23 +1,23 @@
 import 'dart:ffi' hide Size;
 import 'dart:io';
 
-import 'package:bored_g/boat_markers.dart';
+import 'package:bored_g/locations_markers.dart';
 import 'package:bored_g/pink_location_markers.dart';
 import 'package:bored_g/red_location_markers.dart';
 import 'package:flutter/material.dart';
+import 'package:collection/collection.dart';
 import 'package:flutter_map/flutter_map.dart';
 import 'package:flutter_map_marker_cluster/flutter_map_marker_cluster.dart';
 import 'package:hotkey_manager/hotkey_manager.dart';
 import 'package:latlong2/latlong.dart';
-import 'package:win32/win32.dart';
+import 'package:win32/win32.dart' hide Polygon;
 import 'package:ffi/ffi.dart';
 import 'package:path/path.dart' as path;
 
 import '_file_paths.dart';
 import 'crosshair_painter.dart';
-import 'location_markers.dart';
+import 'settlement_location_markers.dart';
 import 'map_latlng.dart';
-import 'wellpump_markers.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -58,8 +58,7 @@ class DayZAppState extends State<DayZApp> {
   double _mapWidth = 256;
   double _mapHeight = 256;
   bool _imageOverlayEnabled = false;
-  bool _wellPumpsEnabled = true;
-  bool _boatsEnabled = true;
+  List<bool> locationMarkersEnabled = List.filled(locationMarkers.length, true);
   bool _redLocationsEnabled = true;
   bool _pinkLocationsEnabled = true;
   late MapController _mapController;
@@ -117,26 +116,17 @@ class DayZAppState extends State<DayZApp> {
           },
           child: const Text("Loot Overlay"),
         ),
-        CheckboxMenuButton(
-          value: _wellPumpsEnabled,
-          onChanged: (value) {
-            setState(() {
-              _wellPumpsEnabled = value ?? false;
-            });
-          },
-          child: Row(
-            children: [const Text("Well Pumps"), const SizedBox(width: 8), wellPumpMarkerIcon],
-          ),
-        ),
-        CheckboxMenuButton(
-          value: _boatsEnabled,
-          onChanged: (value) {
-            setState(() {
-              _boatsEnabled = value ?? false;
-            });
-          },
-          child: Row(
-            children: [const Text("Boats"), const SizedBox(width: 8), boatMarkerIcon],
+        ...locationMarkers.mapIndexed(
+          (index, e) => CheckboxMenuButton(
+            value: locationMarkersEnabled[index],
+            onChanged: (value) {
+              setState(() {
+                locationMarkersEnabled[index] = value ?? false;
+              });
+            },
+            child: Row(
+              children: [Text(e.uiDisplayName), const SizedBox(width: 8), e.builder(context)],
+            ),
           ),
         ),
         CheckboxMenuButton(
@@ -205,6 +195,7 @@ class DayZAppState extends State<DayZApp> {
         child: FlutterMap(
           mapController: _mapController,
           options: MapOptions(
+            onTap: (tapPosition, point) => print(point),
             interactiveFlags: InteractiveFlag.drag | InteractiveFlag.flingAnimation,
             crs: DayZCrs(),
             zoom: 2,
@@ -230,7 +221,7 @@ class DayZAppState extends State<DayZApp> {
                   padding: EdgeInsets.all(50),
                   maxZoom: 15,
                 ),
-                markers: locationMarkers,
+                markers: settlementLocationMarkers,
                 builder: (context, markers) {
                   return Container(
                     decoration: BoxDecoration(borderRadius: BorderRadius.circular(12), color: Colors.amber[400]),
@@ -261,10 +252,7 @@ class DayZAppState extends State<DayZApp> {
                   ),
                 ],
               ),
-            if (_wellPumpsEnabled) MarkerLayer(markers: wellPumpMarkers),
-            if (_boatsEnabled) MarkerLayer(markers: boatMarkers),
-            if (_redLocationsEnabled) MarkerLayer(markers: redLocationMarkers),
-            if (_pinkLocationsEnabled) MarkerLayer(markers: pinkLocationMarkers),
+            ...locationMarkers.mapIndexed((index, e) => locationMarkersEnabled[index] ? e.markerLayer : null).whereNotNull()
           ],
         ),
       ),

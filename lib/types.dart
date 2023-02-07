@@ -154,3 +154,199 @@ class PinkLocation extends Comparable<PinkLocation> {
     }
   }
 }
+
+class LightHouseLocation {
+  NormXY xy;
+
+  LightHouseLocation(this.xy);
+  LightHouseLocation.fromXY(double x, double y) : xy = NormXY(x, y);
+
+  static Map<String, dynamic> toJson(LightHouseLocation value) => {
+        'x': value.xy.x,
+        'y': value.xy.y,
+      };
+
+  LightHouseLocation.fromJson(Map<String, dynamic> json) : xy = NormXY(json['x'], json['y']);
+}
+
+class MilitaryTentLocation {
+  NormXY xy;
+
+  MilitaryTentLocation(this.xy);
+  MilitaryTentLocation.fromXY(double x, double y) : xy = NormXY(x, y);
+
+  static Map<String, dynamic> toJson(MilitaryTentLocation value) => {
+        'x': value.xy.x,
+        'y': value.xy.y,
+      };
+
+  MilitaryTentLocation.fromJson(Map<String, dynamic> json) : xy = NormXY(json['x'], json['y']);
+}
+
+class CaravanWreckLocation {
+  NormXY xy;
+
+  CaravanWreckLocation(this.xy);
+  CaravanWreckLocation.fromXY(double x, double y) : xy = NormXY(x, y);
+
+  static Map<String, dynamic> toJson(CaravanWreckLocation value) => {
+        'x': value.xy.x,
+        'y': value.xy.y,
+      };
+
+  CaravanWreckLocation.fromJson(Map<String, dynamic> json) : xy = NormXY(json['x'], json['y']);
+}
+
+class IkarusWreckLocation {
+  NormXY xy;
+
+  IkarusWreckLocation(this.xy);
+  IkarusWreckLocation.fromXY(double x, double y) : xy = NormXY(x, y);
+
+  static Map<String, dynamic> toJson(IkarusWreckLocation value) => {
+        'x': value.xy.x,
+        'y': value.xy.y,
+      };
+
+  IkarusWreckLocation.fromJson(Map<String, dynamic> json) : xy = NormXY(json['x'], json['y']);
+}
+
+class TruckWreckLocation {
+  NormXY xy;
+
+  TruckWreckLocation(this.xy);
+  TruckWreckLocation.fromXY(double x, double y) : xy = NormXY(x, y);
+
+  static Map<String, dynamic> toJson(TruckWreckLocation value) => {
+        'x': value.xy.x,
+        'y': value.xy.y,
+      };
+
+  TruckWreckLocation.fromJson(Map<String, dynamic> json) : xy = NormXY(json['x'], json['y']);
+}
+
+class SedanWreckLocation {
+  NormXY xy;
+
+  SedanWreckLocation(this.xy);
+  SedanWreckLocation.fromXY(double x, double y) : xy = NormXY(x, y);
+
+  static Map<String, dynamic> toJson(SedanWreckLocation value) => {
+        'x': value.xy.x,
+        'y': value.xy.y,
+      };
+
+  SedanWreckLocation.fromJson(Map<String, dynamic> json) : xy = NormXY(json['x'], json['y']);
+}
+
+class HbWreckLocation {
+  NormXY xy;
+
+  HbWreckLocation(this.xy);
+  HbWreckLocation.fromXY(double x, double y) : xy = NormXY(x, y);
+
+  static Map<String, dynamic> toJson(HbWreckLocation value) => {
+        'x': value.xy.x,
+        'y': value.xy.y,
+      };
+
+  HbWreckLocation.fromJson(Map<String, dynamic> json) : xy = NormXY(json['x'], json['y']);
+}
+
+class DeerStandLocation {
+  NormXY xy;
+
+  DeerStandLocation(this.xy);
+  DeerStandLocation.fromXY(double x, double y) : xy = NormXY(x, y);
+
+  static Map<String, dynamic> toJson(DeerStandLocation value) => {
+        'x': value.xy.x,
+        'y': value.xy.y,
+      };
+
+  DeerStandLocation.fromJson(Map<String, dynamic> json) : xy = NormXY(json['x'], json['y']);
+}
+
+class ChurchLocation {
+  NormXY xy;
+
+  ChurchLocation(this.xy);
+  ChurchLocation.fromXY(double x, double y) : xy = NormXY(x, y);
+
+  static Map<String, dynamic> toJson(ChurchLocation value) => {
+        'x': value.xy.x,
+        'y': value.xy.y,
+      };
+
+  ChurchLocation.fromJson(Map<String, dynamic> json) : xy = NormXY(json['x'], json['y']);
+}
+
+class MilitaryBarrackLocation {
+  NormXY xy;
+
+  MilitaryBarrackLocation(this.xy);
+  MilitaryBarrackLocation.fromXY(double x, double y) : xy = NormXY(x, y);
+
+  static Map<String, dynamic> toJson(MilitaryBarrackLocation value) => {
+        'x': value.xy.x,
+        'y': value.xy.y,
+      };
+
+  MilitaryBarrackLocation.fromJson(Map<String, dynamic> json) : xy = NormXY(json['x'], json['y']);
+}
+
+class GreenHouseLocation {
+  NormXY xy;
+
+  GreenHouseLocation(this.xy);
+  GreenHouseLocation.fromXY(double x, double y) : xy = NormXY(x, y);
+
+  static Map<String, dynamic> toJson(GreenHouseLocation value) => {
+        'x': value.xy.x,
+        'y': value.xy.y,
+      };
+
+  GreenHouseLocation.fromJson(Map<String, dynamic> json) : xy = NormXY(json['x'], json['y']);
+}
+
+class RadioTowerLocation {
+  NormXY xy;
+
+  RadioTowerLocation(this.xy);
+  RadioTowerLocation.fromXY(double x, double y) : xy = NormXY(x, y);
+
+  static Map<String, dynamic> toJson(RadioTowerLocation value) => {
+        'x': value.xy.x,
+        'y': value.xy.y,
+      };
+
+  RadioTowerLocation.fromJson(Map<String, dynamic> json) : xy = NormXY(json['x'], json['y']);
+}
+
+class BarnLocation {
+  NormXY xy;
+
+  BarnLocation(this.xy);
+  BarnLocation.fromXY(double x, double y) : xy = NormXY(x, y);
+
+  static Map<String, dynamic> toJson(BarnLocation value) => {
+        'x': value.xy.x,
+        'y': value.xy.y,
+      };
+
+  BarnLocation.fromJson(Map<String, dynamic> json) : xy = NormXY(json['x'], json['y']);
+}
+
+class GroceryKioskLocation {
+  NormXY xy;
+
+  GroceryKioskLocation(this.xy);
+  GroceryKioskLocation.fromXY(double x, double y) : xy = NormXY(x, y);
+
+  static Map<String, dynamic> toJson(GroceryKioskLocation value) => {
+        'x': value.xy.x,
+        'y': value.xy.y,
+      };
+
+  GroceryKioskLocation.fromJson(Map<String, dynamic> json) : xy = NormXY(json['x'], json['y']);
+}

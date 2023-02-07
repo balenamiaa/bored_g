@@ -10,14 +10,14 @@ import 'package:latlong2/latlong.dart';
 import 'types.dart';
 
 const double _policeStationSize = 12;
-final Color _policeStationColor = Colors.red[800]!;
+final Color _policeStationColor = Colors.red[500]!;
 final Icon policeStationIcon = Icon(
   Icons.local_police_sharp,
   color: _policeStationColor,
 );
 
 const double _fireStationSize = 12;
-final Color _fireStationColor = Colors.red[800]!;
+final Color _fireStationColor = Colors.red[500]!;
 final Icon fireStationIcon = Icon(
   Icons.local_fire_department_sharp,
   color: _fireStationColor,

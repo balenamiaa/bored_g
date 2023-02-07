@@ -7,7 +7,7 @@ import 'package:quiver/iterables.dart';
 import 'gamexy_conv.dart';
 
 final hospitalRegex = RegExp(r'Land_.*_Hospital[^]*?pos="(.*?) (.*?) (.*?)"');
-final medicalCenterRegex = RegExp(r'Land_Medical[^]*?pos="(.*?) (.*?) (.*?)"');
+final medicalCenterRegex = RegExp(r'Land_.*_HealthCare[^]*?pos="(.*?) (.*?) (.*?)"');
 
 void main() {
   var mapGroupPosStr = File("cp_rawdata/mapGroupPos.xml").readAsStringSync();

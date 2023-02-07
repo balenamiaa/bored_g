@@ -10,16 +10,16 @@ import 'package:latlong2/latlong.dart';
 import 'types.dart';
 
 const double _hospitalSize = 12;
-final Color _hospitalColor = Colors.pink[400]!;
+final Color _hospitalColor = Colors.pink[300]!;
 final Icon hospitalIcon = Icon(
   Icons.local_hospital_sharp,
   color: _hospitalColor,
 );
 
 const double _medicalCenterSize = 12;
-final Color _medicalCenterColor = Colors.pink[800]!;
+final Color _medicalCenterColor = Colors.pink[300]!;
 final Icon medicalCenterIcon = Icon(
-  Icons.medical_services_sharp,
+  Icons.healing_outlined,
   color: _medicalCenterColor,
 );
 
