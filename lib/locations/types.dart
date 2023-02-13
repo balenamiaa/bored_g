@@ -2,16 +2,24 @@ enum LocationType { city, village, capital, camp, local }
 
 class Location {
   String name;
+  String russianName;
   double x;
   double y;
   LocationType type;
 
-  Location(this.name, this.x, this.y, this.type);
+  Location(this.name, this.russianName, this.x, this.y, this.type);
 
-  static Map<String, dynamic> toJson(Location value) => {'name': value.name, 'latitude': value.x, 'longitude': value.y, 'type': value.type.name};
+  static Map<String, dynamic> toJson(Location value) => {
+        'name': value.name,
+        'russianName': value.russianName,
+        'latitude': value.x,
+        'longitude': value.y,
+        'type': value.type.name
+      };
 
   Location.fromJson(Map<String, dynamic> json)
       : name = json['name'],
+        russianName = json['russianName'],
         x = json['latitude'],
         y = json['longitude'],
         type = LocationType.values.byName(json['type']);
@@ -44,7 +52,8 @@ class WellPumpLocation {
         'y': value.xy.y,
       };
 
-  WellPumpLocation.fromJson(Map<String, dynamic> json) : xy = NormXY(json['x'], json['y']);
+  WellPumpLocation.fromJson(Map<String, dynamic> json)
+      : xy = NormXY(json['x'], json['y']);
 }
 
 class BoatLocation {
@@ -58,7 +67,8 @@ class BoatLocation {
         'y': value.xy.y,
       };
 
-  BoatLocation.fromJson(Map<String, dynamic> json) : xy = NormXY(json['x'], json['y']);
+  BoatLocation.fromJson(Map<String, dynamic> json)
+      : xy = NormXY(json['x'], json['y']);
 }
 
 enum RedLocationType { military, firestation, policestation }
@@ -166,7 +176,8 @@ class LightHouseLocation {
         'y': value.xy.y,
       };
 
-  LightHouseLocation.fromJson(Map<String, dynamic> json) : xy = NormXY(json['x'], json['y']);
+  LightHouseLocation.fromJson(Map<String, dynamic> json)
+      : xy = NormXY(json['x'], json['y']);
 }
 
 class MilitaryTentLocation {
@@ -180,7 +191,8 @@ class MilitaryTentLocation {
         'y': value.xy.y,
       };
 
-  MilitaryTentLocation.fromJson(Map<String, dynamic> json) : xy = NormXY(json['x'], json['y']);
+  MilitaryTentLocation.fromJson(Map<String, dynamic> json)
+      : xy = NormXY(json['x'], json['y']);
 }
 
 class CaravanWreckLocation {
@@ -194,7 +206,8 @@ class CaravanWreckLocation {
         'y': value.xy.y,
       };
 
-  CaravanWreckLocation.fromJson(Map<String, dynamic> json) : xy = NormXY(json['x'], json['y']);
+  CaravanWreckLocation.fromJson(Map<String, dynamic> json)
+      : xy = NormXY(json['x'], json['y']);
 }
 
 class IkarusWreckLocation {
@@ -208,7 +221,8 @@ class IkarusWreckLocation {
         'y': value.xy.y,
       };
 
-  IkarusWreckLocation.fromJson(Map<String, dynamic> json) : xy = NormXY(json['x'], json['y']);
+  IkarusWreckLocation.fromJson(Map<String, dynamic> json)
+      : xy = NormXY(json['x'], json['y']);
 }
 
 class TruckWreckLocation {
@@ -222,7 +236,8 @@ class TruckWreckLocation {
         'y': value.xy.y,
       };
 
-  TruckWreckLocation.fromJson(Map<String, dynamic> json) : xy = NormXY(json['x'], json['y']);
+  TruckWreckLocation.fromJson(Map<String, dynamic> json)
+      : xy = NormXY(json['x'], json['y']);
 }
 
 class SedanWreckLocation {
@@ -236,7 +251,8 @@ class SedanWreckLocation {
         'y': value.xy.y,
       };
 
-  SedanWreckLocation.fromJson(Map<String, dynamic> json) : xy = NormXY(json['x'], json['y']);
+  SedanWreckLocation.fromJson(Map<String, dynamic> json)
+      : xy = NormXY(json['x'], json['y']);
 }
 
 class HbWreckLocation {
@@ -250,7 +266,8 @@ class HbWreckLocation {
         'y': value.xy.y,
       };
 
-  HbWreckLocation.fromJson(Map<String, dynamic> json) : xy = NormXY(json['x'], json['y']);
+  HbWreckLocation.fromJson(Map<String, dynamic> json)
+      : xy = NormXY(json['x'], json['y']);
 }
 
 class DeerStandLocation {
@@ -264,7 +281,8 @@ class DeerStandLocation {
         'y': value.xy.y,
       };
 
-  DeerStandLocation.fromJson(Map<String, dynamic> json) : xy = NormXY(json['x'], json['y']);
+  DeerStandLocation.fromJson(Map<String, dynamic> json)
+      : xy = NormXY(json['x'], json['y']);
 }
 
 class ChurchLocation {
@@ -278,7 +296,8 @@ class ChurchLocation {
         'y': value.xy.y,
       };
 
-  ChurchLocation.fromJson(Map<String, dynamic> json) : xy = NormXY(json['x'], json['y']);
+  ChurchLocation.fromJson(Map<String, dynamic> json)
+      : xy = NormXY(json['x'], json['y']);
 }
 
 class MilitaryBarrackLocation {
@@ -292,7 +311,8 @@ class MilitaryBarrackLocation {
         'y': value.xy.y,
       };
 
-  MilitaryBarrackLocation.fromJson(Map<String, dynamic> json) : xy = NormXY(json['x'], json['y']);
+  MilitaryBarrackLocation.fromJson(Map<String, dynamic> json)
+      : xy = NormXY(json['x'], json['y']);
 }
 
 class GreenHouseLocation {
@@ -306,7 +326,8 @@ class GreenHouseLocation {
         'y': value.xy.y,
       };
 
-  GreenHouseLocation.fromJson(Map<String, dynamic> json) : xy = NormXY(json['x'], json['y']);
+  GreenHouseLocation.fromJson(Map<String, dynamic> json)
+      : xy = NormXY(json['x'], json['y']);
 }
 
 class RadioTowerLocation {
@@ -320,7 +341,8 @@ class RadioTowerLocation {
         'y': value.xy.y,
       };
 
-  RadioTowerLocation.fromJson(Map<String, dynamic> json) : xy = NormXY(json['x'], json['y']);
+  RadioTowerLocation.fromJson(Map<String, dynamic> json)
+      : xy = NormXY(json['x'], json['y']);
 }
 
 class BarnLocation {
@@ -334,7 +356,8 @@ class BarnLocation {
         'y': value.xy.y,
       };
 
-  BarnLocation.fromJson(Map<String, dynamic> json) : xy = NormXY(json['x'], json['y']);
+  BarnLocation.fromJson(Map<String, dynamic> json)
+      : xy = NormXY(json['x'], json['y']);
 }
 
 class GroceryKioskLocation {
@@ -348,5 +371,6 @@ class GroceryKioskLocation {
         'y': value.xy.y,
       };
 
-  GroceryKioskLocation.fromJson(Map<String, dynamic> json) : xy = NormXY(json['x'], json['y']);
+  GroceryKioskLocation.fromJson(Map<String, dynamic> json)
+      : xy = NormXY(json['x'], json['y']);
 }

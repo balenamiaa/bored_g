@@ -37,7 +37,12 @@ class ScaledMarkerLayer extends StatelessWidget {
 
   final AlignmentGeometry? rotateAlignment;
 
-  const ScaledMarkerLayer({super.key, this.markers = const [], this.rotate = false, this.rotateOrigin, this.rotateAlignment = Alignment.center});
+  const ScaledMarkerLayer(
+      {super.key,
+      this.markers = const [],
+      this.rotate = false,
+      this.rotateOrigin,
+      this.rotateAlignment = Alignment.center});
 
   @override
   Widget build(BuildContext context) {
@@ -45,8 +50,10 @@ class ScaledMarkerLayer extends StatelessWidget {
     final markerWidgets = <Widget>[];
 
     for (final marker in markers) {
-      final northwest = LatLng(marker.center.latitude + (marker.heightLat / 2), marker.center.longitude - (marker.widthLng / 2));
-      final southeast = LatLng(marker.center.latitude - (marker.heightLat / 2), marker.center.longitude + (marker.widthLng / 2));
+      final northwest = LatLng(marker.center.latitude + (marker.heightLat / 2),
+          marker.center.longitude - (marker.widthLng / 2));
+      final southeast = LatLng(marker.center.latitude - (marker.heightLat / 2),
+          marker.center.longitude + (marker.widthLng / 2));
 
       final pxNorthWest = map.project(northwest);
       final pxSouthEast = map.project(southeast);
@@ -54,7 +61,8 @@ class ScaledMarkerLayer extends StatelessWidget {
       final width = pxSouthEast.x - pxNorthWest.x;
       final height = pxSouthEast.y - pxNorthWest.y;
 
-      if (!map.pixelBounds.containsPartialBounds(Bounds(pxNorthWest, pxSouthEast))) {
+      if (!map.pixelBounds
+          .containsPartialBounds(Bounds(pxNorthWest, pxSouthEast))) {
         continue;
       }
 

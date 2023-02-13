@@ -2,816 +2,952 @@
     "locations": [
         {
             "name": "chernogorsk",
+            "russianName": "черногорск",
             "latitude": 44.13163411458333,
             "longitude": 15.115716145833332,
             "type": "capital"
         },
         {
             "name": "novodmitrovsk",
+            "russianName": "новодмитровск",
             "latitude": 73.82662760416667,
             "longitude": 93.69173177083333,
             "type": "capital"
         },
         {
             "name": "novoselki",
+            "russianName": "новоселки",
             "latitude": 39.81712239583333,
             "longitude": 21.200260416666666,
             "type": "city"
         },
         {
             "name": "dubovo",
+            "russianName": "дубово",
             "latitude": 43.97467447916667,
             "longitude": 23.406621093749997,
             "type": "city"
         },
         {
             "name": "vysotovo",
+            "russianName": "высотово",
             "latitude": 37.11744791666666,
             "longitude": 16.641341145833337,
             "type": "city"
         },
         {
             "name": "zelenogorsk",
+            "russianName": "зеленогорск",
             "latitude": 18.203125,
             "longitude": 33.6328125,
             "type": "city"
         },
         {
             "name": "berezino",
+            "russianName": "березино",
             "latitude": 80.54936848958333,
             "longitude": 63.54805338541667,
             "type": "city"
         },
         {
             "name": "elektrozavodsk",
+            "russianName": "электрозаводск",
             "latitude": 66.97057291666667,
             "longitude": 12.973763020833335,
             "type": "city"
         },
         {
             "name": "novayapetrovka",
+            "russianName": "новая петровка",
             "latitude": 22.637819010416667,
             "longitude": 84.18777994791668,
             "type": "city"
         },
         {
             "name": "gorka",
+            "russianName": "горка",
             "latitude": 62.00520833333333,
             "longitude": 58.235677083333336,
             "type": "city"
         },
         {
             "name": "solnechny",
+            "russianName": "солнечный",
             "latitude": 87.810703125,
             "longitude": 40.53309895833333,
             "type": "city"
         },
         {
             "name": "starysobor",
+            "russianName": "старый собор",
             "latitude": 39.8046875,
             "longitude": 51.100260416666664,
             "type": "city"
         },
         {
             "name": "vybor",
+            "russianName": "выбор",
             "latitude": 25.454628906249997,
             "longitude": 58.721445312499995,
             "type": "city"
         },
         {
             "name": "severograd",
+            "russianName": "североград",
             "latitude": 53.180234375000005,
             "longitude": 81.85938802083334,
             "type": "city"
         },
         {
             "name": "bor",
+            "russianName": "бор",
             "latitude": 21.591184895833333,
             "longitude": 26.503684895833334,
             "type": "village"
         },
         {
             "name": "svetloyarsk",
+            "russianName": "светлоярск",
             "latitude": 91.07903645833333,
             "longitude": 86.35273437500001,
             "type": "city"
         },
         {
             "name": "krasnostav",
+            "russianName": "красностав",
             "latitude": 72.93728515625,
             "longitude": 80.34380208333334,
             "type": "city"
         },
         {
             "name": "chernayapolyana",
+            "russianName": "черная поляна",
             "latitude": 79.15716145833333,
             "longitude": 89.64986979166666,
             "type": "city"
         },
         {
             "name": "polyana",
+            "russianName": "поляна",
             "latitude": 70.2734375,
             "longitude": 53.125,
             "type": "city"
         },
         {
             "name": "tulga",
+            "russianName": "тулга",
             "latitude": 83.125,
             "longitude": 28.541666666666664,
             "type": "village"
         },
         {
             "name": "msta",
+            "russianName": "мста",
             "latitude": 73.7876953125,
             "longitude": 35.295572916666664,
             "type": "village"
         },
         {
             "name": "staroye",
+            "russianName": "старое",
             "latitude": 66.48776041666667,
             "longitude": 35.058919270833336,
             "type": "village"
         },
         {
             "name": "shakhovka",
+            "russianName": "шаковка",
             "latitude": 63.33749999999999,
             "longitude": 42.755859375,
             "type": "village"
         },
         {
             "name": "dolina",
+            "russianName": "долина",
             "latitude": 73.47115885416666,
             "longitude": 43.18736979166667,
             "type": "village"
         },
         {
             "name": "orlovets",
+            "russianName": "орловец",
             "latitude": 79.75260416666666,
             "longitude": 47.220052083333336,
             "type": "village"
         },
         {
             "name": "novysobor",
+            "russianName": "новый собор",
             "latitude": 46.37779947916666,
             "longitude": 50.61608072916667,
             "type": "village"
         },
         {
             "name": "kabanino",
+            "russianName": "кабанино",
             "latitude": 34.509830729166666,
             "longitude": 56.28841145833333,
             "type": "village"
         },
         {
             "name": "mogilevka",
+            "russianName": "могилевка",
             "latitude": 49.80735677083333,
             "longitude": 33.180078125,
             "type": "village"
         },
         {
             "name": "nadezhdino",
+            "russianName": "надеждино",
             "latitude": 38.372395833333336,
             "longitude": 31.119791666666668,
             "type": "village"
         },
         {
             "name": "guglovo",
+            "russianName": "гуглово",
             "latitude": 54.98046875,
             "longitude": 42.83203125,
             "type": "village"
         },
         {
             "name": "kamyshovo",
+            "russianName": "камышово",
             "latitude": 79.23177083333334,
             "longitude": 22.513020833333332,
             "type": "village"
         },
         {
             "name": "pusta",
+            "russianName": "пуста",
             "latitude": 59.876302083333336,
             "longitude": 25.21484375,
             "type": "village"
         },
         {
             "name": "dubrovka",
+            "russianName": "дубровка",
             "latitude": 67.21548828125,
             "longitude": 64.37654296874999,
             "type": "village"
         },
         {
             "name": "vyshnayadubrovka",
+            "russianName": "верхняя дубровка",
             "latitude": 64.62775390625,
             "longitude": 68.15702473958332,
             "type": "village"
         },
         {
             "name": "khelm",
+            "russianName": "хелм",
             "latitude": 80.26868489583333,
             "longitude": 70.12376302083332,
             "type": "village"
         },
         {
             "name": "olsha",
+            "russianName": "ольша",
             "latitude": 87.25260416666667,
             "longitude": 83.97135416666667,
             "type": "village"
         },
         {
             "name": "gvozdno",
+            "russianName": "гвоздно",
             "latitude": 56.28093098958333,
             "longitude": 77.69606119791666,
             "type": "village"
         },
         {
             "name": "grishino",
+            "russianName": "гришино",
             "latitude": 38.93229166666667,
             "longitude": 66.77734375,
             "type": "village"
         },
         {
             "name": "rogovo",
+            "russianName": "рогово",
             "latitude": 31.263020833333332,
             "longitude": 43.932291666666664,
             "type": "village"
         },
         {
             "name": "pogorevka",
+            "russianName": "погоревка",
             "latitude": 28.938802083333332,
             "longitude": 41.158854166666664,
             "type": "village"
         },
         {
             "name": "pustoshka",
+            "russianName": "пустошка",
             "latitude": 20.429322916666667,
             "longitude": 51.37320963541667,
             "type": "village"
         },
         {
             "name": "kozlovka",
+            "russianName": "козловка",
             "latitude": 28.658854166666664,
             "longitude": 30.833333333333336,
             "type": "village"
         },
         {
             "name": "karmanovka",
+            "russianName": "кармановка",
             "latitude": 82.68638020833333,
             "longitude": 95.6465625,
             "type": "village"
         },
         {
             "name": "balota",
+            "russianName": "балота",
             "latitude": 29.476432291666665,
             "longitude": 16.050260416666667,
             "type": "village"
         },
         {
             "name": "komarovo",
+            "russianName": "комарово",
             "latitude": 24.1015625,
             "longitude": 15.885416666666666,
             "type": "village"
         },
         {
             "name": "kamenka",
+            "russianName": "каменка",
             "latitude": 12.897135416666666,
             "longitude": 14.368489583333332,
             "type": "village"
         },
         {
             "name": "myshkino",
+            "russianName": "мышкино",
             "latitude": 13.333333333333334,
             "longitude": 47.252604166666664,
             "type": "village"
         },
         {
             "name": "pavlovo",
+            "russianName": "павлово",
             "latitude": 11.028515625,
             "longitude": 25.121419270833336,
             "type": "village"
         },
         {
             "name": "lopatino",
+            "russianName": "лопатино",
             "latitude": 18.235677083333332,
             "longitude": 65.29296875,
             "type": "village"
         },
         {
             "name": "vyshnoye",
+            "russianName": "вышное",
             "latitude": 43.157552083333336,
             "longitude": 39.39453125,
             "type": "village"
         },
         {
             "name": "prigorodki",
+            "russianName": "пригородки",
             "latitude": 50.520833333333336,
             "longitude": 21.71875,
             "type": "village"
         },
         {
             "name": "drozhino",
+            "russianName": "дрожжино",
             "latitude": 21.966145833333332,
             "longitude": 31.647135416666668,
             "type": "village"
         },
         {
             "name": "sosnovka",
+            "russianName": "сосновка",
             "latitude": 16.640625,
             "longitude": 41.061197916666664,
             "type": "village"
         },
         {
             "name": "nizhneye",
+            "russianName": "нижнее",
             "latitude": 83.4953125,
             "longitude": 52.71940104166667,
             "type": "village"
         },
         {
             "name": "pulkovo",
+            "russianName": "пулково",
             "latitude": 32.64973958333333,
             "longitude": 36.50390625,
             "type": "village"
         },
         {
             "name": "berezhki",
+            "russianName": "бережки",
             "latitude": 97.78645833333334,
             "longitude": 90.52734375,
             "type": "village"
         },
         {
             "name": "turovo",
+            "russianName": "турово",
             "latitude": 88.73697916666666,
             "longitude": 92.09635416666667,
             "type": "village"
         },
         {
             "name": "belayapolyana",
+            "russianName": "белая поляна",
             "latitude": 92.2265625,
             "longitude": 97.44791666666667,
             "type": "village"
         },
         {
             "name": "dobroye",
+            "russianName": "доброе",
             "latitude": 84.609375,
             "longitude": 98.0859375,
             "type": "village"
         },
         {
             "name": "nagornoye",
+            "russianName": "нагорное",
             "latitude": 60.45572916666667,
             "longitude": 95.55338541666667,
             "type": "village"
         },
         {
             "name": "svergino",
+            "russianName": "свергино",
             "latitude": 61.80677083333334,
             "longitude": 90.3337890625,
             "type": "village"
         },
         {
             "name": "ratnoye",
+            "russianName": "ратное",
             "latitude": 40.337747395833325,
             "longitude": 83.0846484375,
             "type": "village"
         },
         {
             "name": "kamensk",
+            "russianName": "каменск",
             "latitude": 43.93711588541667,
             "longitude": 93.94561197916667,
             "type": "village"
         },
         {
             "name": "krasnoye",
+            "russianName": "красное",
             "latitude": 41.74071614583333,
             "longitude": 97.85130859374999,
             "type": "village"
         },
         {
             "name": "staryyar",
+            "russianName": "старый яр",
             "latitude": 32.473046875,
             "longitude": 97.61052083333334,
             "type": "village"
         },
         {
             "name": "polesovo",
+            "russianName": "полесово",
             "latitude": 38.77432942708333,
             "longitude": 88.26852864583333,
             "type": "village"
         },
         {
             "name": "tisy",
+            "russianName": "тисы",
             "latitude": 22.406575520833332,
             "longitude": 96.35123697916667,
             "type": "village"
         },
         {
             "name": "topolniki",
+            "russianName": "топольники",
             "latitude": 18.969694010416667,
             "longitude": 80.51013671875,
             "type": "village"
         },
         {
             "name": "zaprudnoye",
+            "russianName": "запрудное",
             "latitude": 33.9453125,
             "longitude": 83.28125,
             "type": "village"
         },
         {
             "name": "sinystok",
+            "russianName": "синысток",
             "latitude": 10.014830729166667,
             "longitude": 77.50376302083333,
             "type": "village"
         },
         {
             "name": "vavilovo",
+            "russianName": "вавилово",
             "latitude": 14.733072916666668,
             "longitude": 72.28515625,
             "type": "village"
         },
         {
             "name": "kumyrna",
+            "russianName": "кумырна",
             "latitude": 54.036458333333336,
             "longitude": 39.4140625,
             "type": "village"
         },
         {
             "name": "kalinovka",
+            "russianName": "калиновка",
             "latitude": 48.489583333333336,
             "longitude": 87.27864583333333,
             "type": "village"
         },
         {
             "name": "bogatyrka",
+            "russianName": "богатырка",
             "latitude": 9.463671875,
             "longitude": 57.75338541666667,
             "type": "village"
         },
         {
             "name": "svyatoyromanskiresort",
+            "russianName": "свято-романовский горнолыжный курорт",
             "latitude": 4.153645833333333,
             "longitude": 75.95703125,
             "type": "local"
         },
         {
             "name": "skvschbiathlonarena",
+            "russianName": "сквсч биатлон арена",
             "latitude": 2.32421875,
             "longitude": 72.5390625,
             "type": "local"
         },
         {
             "name": "zvir",
+            "russianName": "звир",
             "latitude": 3.758658854166667,
             "longitude": 34.61861979166667,
             "type": "village"
         },
         {
             "name": "zabolotye",
+            "russianName": "заболотье",
             "latitude": 8.18267578125,
             "longitude": 65.06028645833334,
             "type": "village"
         },
         {
             "name": "galkino",
+            "russianName": "галкино",
             "latitude": 7.17890625,
             "longitude": 57.28040364583333,
             "type": "local"
         },
         {
             "name": "arsenovo",
+            "russianName": "арсеньево",
             "latitude": 55.401438802083334,
             "longitude": 90.61606770833333,
             "type": "camp"
         },
         {
             "name": "stroytel",
+            "russianName": "строитель",
             "latitude": 45.6876953125,
             "longitude": 28.4193359375,
             "type": "camp"
         },
         {
             "name": "romashka",
+            "russianName": "ромашка",
             "latitude": 53.239596354166665,
             "longitude": 71.48625651041667,
             "type": "camp"
         },
         {
             "name": "kometa",
+            "russianName": "комета",
             "latitude": 66.87302734375,
             "longitude": 23.165546875,
             "type": "camp"
         },
         {
             "name": "druzhba",
+            "russianName": "дружба",
             "latitude": 74.45963541666667,
             "longitude": 69.62890625,
             "type": "camp"
         },
         {
             "name": "nadezhda",
+            "russianName": "надежда",
             "latitude": 47.395624999999995,
             "longitude": 45.666341145833336,
             "type": "camp"
         },
         {
             "name": "youthpioneer",
+            "russianName": "юный пионер",
             "latitude": 72.62906901041667,
             "longitude": 46.05561848958333,
             "type": "camp"
         },
         {
             "name": "proudchernarus",
+            "russianName": "гордый чернорус",
             "latitude": 20.830839843750002,
             "longitude": 40.20138020833333,
             "type": "camp"
         },
         {
             "name": "shkolnik",
+            "russianName": "школьник",
             "latitude": 96.72202473958333,
             "longitude": 94.86346354166668,
             "type": "camp"
         },
         {
             "name": "pobeda",
+            "russianName": "победа",
             "latitude": 24.110559895833333,
             "longitude": 96.85145833333333,
             "type": "camp"
         },
         {
             "name": "metalurg",
+            "russianName": "металлург",
             "latitude": 6.740924479166667,
             "longitude": 43.472545572916665,
             "type": "camp"
         },
         {
             "name": "dichina",
+            "russianName": "дишина",
             "latitude": 30.065104166666668,
             "longitude": 50.91796875,
             "type": "local"
         },
         {
             "name": "novylug",
+            "russianName": "новый луг",
             "latitude": 60.227864583333336,
             "longitude": 73.95833333333334,
             "type": "local"
         },
         {
             "name": "staryeluga",
+            "russianName": "старые луга",
             "latitude": 45.045572916666664,
             "longitude": 58.561197916666664,
             "type": "local"
         },
         {
             "name": "grubyeskaly",
+            "russianName": "грубые скалы",
             "latitude": 85.38450520833332,
             "longitude": 77.47395833333334,
             "type": "local"
         },
         {
             "name": "chernyles",
+            "russianName": "черный лес",
             "latitude": 58.79557291666667,
             "longitude": 50.80078125000001,
             "type": "local"
         },
         {
             "name": "radiozenit",
+            "russianName": "радио зенит",
             "latitude": 52.60423177083333,
             "longitude": 60.81822916666667,
             "type": "local"
         },
         {
             "name": "pustoykhrebet",
+            "russianName": "пустой хребет",
             "latitude": 70.8984375,
             "longitude": 36.88151041666667,
             "type": "local"
         },
         {
             "name": "lesnoykhrebet",
+            "russianName": "лесной хребет",
             "latitude": 52.8826171875,
             "longitude": 50.88242187499999,
             "type": "local"
         },
         {
             "name": "grozovypereval",
+            "russianName": "грозовой перевал",
             "latitude": 21.60234375,
             "longitude": 99.28743489583333,
             "type": "local"
         },
         {
             "name": "sosnovypereval",
+            "russianName": "сосновый перевал",
             "latitude": 17.49609375,
             "longitude": 42.90546875,
             "type": "local"
         },
         {
             "name": "perevaloreshka",
+            "russianName": "перевал орешка",
             "latitude": 63.946555989583345,
             "longitude": 39.64057942708333,
             "type": "local"
         },
         {
             "name": "turovskiypereval",
+            "russianName": "туровский перевал",
             "latitude": 95.53542317708333,
             "longitude": 91.72725260416667,
             "type": "local"
         },
         {
             "name": "tridoliny",
+            "russianName": "три долины",
             "latitude": 83.10201822916666,
             "longitude": 35.2357421875,
             "type": "local"
         },
         {
             "name": "grozovyedoly",
+            "russianName": "грозовые доли",
             "latitude": 67.7342578125,
             "longitude": 96.3096875,
             "type": "local"
         },
         {
             "name": "skalka",
+            "russianName": "скалка",
             "latitude": 37.486979166666664,
             "longitude": 94.30989583333333,
             "type": "local"
         },
         {
             "name": "vidy",
+            "russianName": "виды",
             "latitude": 5.111028645833334,
             "longitude": 93.74228515625,
             "type": "local"
         },
         {
             "name": "adamovka",
+            "russianName": "адамовка",
             "latitude": 34.769921875,
             "longitude": 74.08860677083334,
             "type": "local"
         },
         {
             "name": "skalisty",
+            "russianName": "скалистый",
             "latitude": 89.2933203125,
             "longitude": 20.304557291666665,
             "type": "village"
         },
         {
             "name": "mysgolova",
+            "russianName": "мыс голова",
             "latitude": 53.94565755208334,
             "longitude": 15.6614453125,
             "type": "local"
         },
         {
             "name": "drakon",
+            "russianName": "дракон",
             "latitude": 72.85807291666667,
             "longitude": 15.904947916666668,
             "type": "local"
         },
         {
             "name": "otmel",
+            "russianName": "отмель",
             "latitude": 75.39876302083334,
             "longitude": 20.91953125,
             "type": "local"
         },
         {
             "name": "myskrutoy",
+            "russianName": "мыс крутой",
             "latitude": 88.39967447916666,
             "longitude": 25.89075520833333,
             "type": "local"
         },
         {
             "name": "maryanka",
+            "russianName": "марьянка",
             "latitude": 18.157552083333332,
             "longitude": 22.044270833333332,
             "type": "local"
         },
         {
             "name": "polonina",
+            "russianName": "полонина",
             "latitude": 6.539622395833334,
             "longitude": 27.622845052083335,
             "type": "local"
         },
         {
             "name": "kalinka",
+            "russianName": "калинка",
             "latitude": 21.787109375,
             "longitude": 73.51625651041667,
             "type": "local"
         },
         {
             "name": "trikresta",
+            "russianName": "три креста",
             "latitude": 1.9596354166666667,
             "longitude": 61.705729166666664,
             "type": "local"
         },
         {
             "name": "rostoki",
+            "russianName": "ростоки",
             "latitude": 4.8466796875,
             "longitude": 56.301171875,
             "type": "local"
         },
         {
             "name": "makosh",
+            "russianName": "макошь",
             "latitude": 51.10494791666667,
             "longitude": 42.18873697916666,
             "type": "local"
         },
         {
             "name": "klenovyipereval",
+            "russianName": "кленовый перевал",
             "latitude": 70.72071614583334,
             "longitude": 75.42651041666667,
             "type": "local"
         },
         {
             "name": "zmeinykhrebet",
+            "russianName": "змеиный хребет",
             "latitude": 74.5193359375,
             "longitude": 88.58671875,
             "type": "local"
         },
         {
             "name": "krutyeskaly",
+            "russianName": "крутые скалы",
             "latitude": 96.8791015625,
             "longitude": 89.00885416666668,
             "type": "local"
         },
         {
             "name": "bogat",
+            "russianName": "богат",
             "latitude": 45.95059244791667,
             "longitude": 78.27845703125,
             "type": "local"
         },
         {
             "name": "dubnik",
+            "russianName": "дубник",
             "latitude": 21.4732421875,
             "longitude": 67.2583984375,
             "type": "local"
         },
         {
             "name": "medvezhilugi",
+            "russianName": "медвежьи луга",
             "latitude": 62.766927083333336,
             "longitude": 86.171875,
             "type": "local"
         },
         {
             "name": "karerkrasnayazarya",
+            "russianName": "kарьер красная заря",
             "latitude": 55.76399088541667,
             "longitude": 87.36122395833334,
             "type": "local"
         },
         {
             "name": "matveyevo",
+            "russianName": "матвеево",
             "latitude": 27.871093749999996,
             "longitude": 48.046875,
             "type": "local"
         },
         {
             "name": "kotka",
+            "russianName": "котька",
             "latitude": 38.240234375,
             "longitude": 44.81276041666666,
             "type": "local"
         },
         {
             "name": "chernyeskaly",
+            "russianName": "черные скалы",
             "latitude": 25.602682291666667,
             "longitude": 95.04880208333333,
             "type": "local"
         },
         {
             "name": "mb_vmc",
+            "russianName": "военная база",
             "latitude": 29.27734375,
             "longitude": 53.977864583333336,
             "type": "local"
         },
         {
             "name": "mb_tisy",
+            "russianName": "военная база",
             "latitude": 10.221354166666668,
             "longitude": 91.59505208333333,
             "type": "local"
         },
         {
             "name": "mb_kamensk",
+            "russianName": "военная база",
             "latitude": 51.03393229166666,
             "longitude": 95.73452473958334,
             "type": "local"
         },
         {
             "name": "mb_zeleno",
+            "russianName": "военная база",
             "latitude": 15.692545572916666,
             "longitude": 33.422402343749994,
             "type": "local"
         },
         {
             "name": "mb_pavlovo",
+            "russianName": "военная база",
             "latitude": 13.125,
             "longitude": 22.1875,
             "type": "local"
         },
         {
             "name": "af_balota",
+            "russianName": "аэродром",
             "latitude": 33.08613932291667,
             "longitude": 15.470885416666667,
             "type": "local"
         },
         {
             "name": "af_krasno",
+            "russianName": "аэродром",
             "latitude": 78.78047526041667,
             "longitude": 81.86130208333334,
             "type": "local"
         },
         {
             "name": "af_vybor",
+            "russianName": "авиационная база выбор",
             "latitude": 28.828125,
             "longitude": 66.26953125,
             "type": "local"

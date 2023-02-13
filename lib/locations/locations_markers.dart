@@ -1,11 +1,8 @@
-import 'dart:convert';
-import 'dart:io';
-
+import 'package:bored_g/_cp_data.dart';
 import 'package:bored_g/map_latlng.dart';
 import 'package:bored_g/scaling_marker_layer.dart';
 import 'package:fluttericon/rpg_awesome_icons.dart';
-import '_file_paths.dart';
-import '_flutterstyle.dart';
+import '../_flutterstyle.dart';
 import 'package:flutter_map/plugin_api.dart';
 import 'package:latlong2/latlong.dart';
 
@@ -27,13 +24,22 @@ class FixedLocationMarkerEntry extends LocationMarkerEntry {
   final String nameInMapDataJson;
   final NormXY Function(dynamic e) locationRetriever;
 
-  FixedLocationMarkerEntry({required super.uiDisplayName, required super.builder, required this.nameInMapDataJson, required this.size, required this.locationRetriever}) {
+  FixedLocationMarkerEntry(
+      {required super.uiDisplayName,
+      required super.builder,
+      required this.nameInMapDataJson,
+      required this.size,
+      required this.locationRetriever}) {
     markerLayer = MarkerLayer(
-        markers: (jsonDecode(File(cpDataPath).readAsStringSync())[nameInMapDataJson] as List<dynamic>).map(
+        markers: cpData[nameInMapDataJson]!.map(
       (e) {
         var xy = locationRetriever(e);
 
-        return Marker(point: LatLng(latFromNormY(xy.y), lngFromNormX(xy.x)), width: size, height: size, builder: builder);
+        return Marker(
+            point: LatLng(latFromNormY(xy.y), lngFromNormX(xy.x)),
+            width: size,
+            height: size,
+            builder: builder);
       },
     ).toList());
   }
@@ -45,13 +51,23 @@ class ScaledLocationMarkerEntry extends LocationMarkerEntry {
   final String nameInMapDataJson;
   final NormXY Function(dynamic e) locationRetriever;
 
-  ScaledLocationMarkerEntry({required super.uiDisplayName, required super.builder, required this.nameInMapDataJson, required this.widthLng, required this.heightLat, required this.locationRetriever}) {
+  ScaledLocationMarkerEntry(
+      {required super.uiDisplayName,
+      required super.builder,
+      required this.nameInMapDataJson,
+      required this.widthLng,
+      required this.heightLat,
+      required this.locationRetriever}) {
     markerLayer = ScaledMarkerLayer(
-        markers: (jsonDecode(File(cpDataPath).readAsStringSync())[nameInMapDataJson] as List<dynamic>).map(
+        markers: cpData[nameInMapDataJson]!.map(
       (e) {
         var xy = locationRetriever(e);
 
-        return ScaledMarker(center: LatLng(latFromNormY(xy.y), lngFromNormX(xy.x)), widthLng: widthLng, heightLat: heightLat, builder: builder);
+        return ScaledMarker(
+            center: LatLng(latFromNormY(xy.y), lngFromNormX(xy.x)),
+            widthLng: widthLng,
+            heightLat: heightLat,
+            builder: builder);
       },
     ).toList());
   }
@@ -82,7 +98,7 @@ var locationMarkers = <LocationMarkerEntry>[
       fit: BoxFit.contain,
       child: Icon(
         Icons.water,
-        color: Colors.blueAccent[100]!,
+        color: Colors.blue[300]!,
       ),
     ),
   ),
@@ -110,7 +126,7 @@ var locationMarkers = <LocationMarkerEntry>[
       fit: BoxFit.contain,
       child: Icon(
         Icons.church,
-        color: Colors.blueGrey[100]!,
+        color: Colors.yellow[400]!,
       ),
     ),
   ),
@@ -231,6 +247,20 @@ var locationMarkers = <LocationMarkerEntry>[
       child: Icon(
         RpgAwesome.tower,
         color: Colors.deepOrange[500]!,
+      ),
+    ),
+  ),
+  FixedLocationMarkerEntry(
+    uiDisplayName: "Radio Tower",
+    nameInMapDataJson: "radio_towers",
+    locationRetriever: (e) => RadioTowerLocation.fromJson(e).xy,
+    size: 12,
+    builder: (context) => FittedBox(
+      alignment: Alignment.center,
+      fit: BoxFit.contain,
+      child: Icon(
+        RpgAwesome.radar_dish,
+        color: Colors.indigo[500]!,
       ),
     ),
   ),

@@ -6,7 +6,8 @@ double lngFromNormX(double normX) => -180 + normX * 3.6;
 
 class DayZCrs extends CrsSimple {
   @override
-  Transformation get transformation => const Transformation(1 / 360, 0.5, -1 / 180, 0.5);
+  Transformation get transformation =>
+      const Transformation(1 / 360, 0.5, -1 / 180, 0.5);
 
   @override
   String get code => 'CRS.DayZ';
